@@ -8,23 +8,31 @@ public class MainAdivinaUnNumero {
     public static void main(String[] args) {
 
 
-        Random r = new Random();
-        int numeroAleatorio = r.nextInt(100);
+        final Random random = new Random();
+        if (adviniaUnNumero(new Scanner(System.in), random.nextInt(100)))
+            System.out.println("Has ganado");
+        else
+            System.out.println("Has perdido");
+
+
+    }
+
+    public static boolean adviniaUnNumero(Scanner scanner, int numeroAleatorio) {
 
         // diez oportunidades para adivinar el numero
         // si acierta, salir del bucle
         // si no acierta, decir si es mayor o menor
         // si no acierta en 10 intentos, decir que ha perdido
-
+        boolean acertado = false;
         int intentos = 0;
         int numero = 0;
-        Scanner sc = new Scanner(System.in);
         while (intentos <10){
             System.out.println("Te quedan " + (10 - intentos) + " intentos");
             System.out.println("Introduce un numero");
-            numero = sc.nextInt();
+            numero = scanner.nextInt();
             if (numero == numeroAleatorio){
-                System.out.println("Has acertado");
+
+                acertado = true;
                 break;
             } else if (numero > numeroAleatorio){
                 System.out.println("El numero es menor");
@@ -32,14 +40,10 @@ public class MainAdivinaUnNumero {
                 System.out.println("El numero es mayor");
             }
 
-            intentos --;
+            intentos ++;
         }
 
-        if (intentos == 10){
-            System.out.println("Has perdido");
-        }
-
-
+        return acertado;
     }
 
 }
