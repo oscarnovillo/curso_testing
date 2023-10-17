@@ -32,7 +32,7 @@ public class MainAdivinaUnNumero {
                 System.out.println("El numero es mayor");
             }
 
-            intentos --;
+            intentos ++;
         }
 
         if (intentos == 10){
