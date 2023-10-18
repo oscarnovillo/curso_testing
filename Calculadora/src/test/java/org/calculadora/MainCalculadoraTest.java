@@ -41,6 +41,7 @@ class MainCalculadoraTest {
 
             //assertEquals("El resultado es: 2\nHas elegido salir\n",salida);
             assertTrue(salida.toLowerCase().contains(caso[1].toLowerCase()));
+
         } // for :
     }
 }
