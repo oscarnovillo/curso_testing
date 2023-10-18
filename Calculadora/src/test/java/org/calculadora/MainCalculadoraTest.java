@@ -12,12 +12,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class MainCalculadoraTest {
 
     @Test
-    @DisplayName("Sumar 1 y 1 para que de 2")
+    @DisplayName("Sumar 0 y 0 para que de 0")
     void sumar_1_y_1_para_que_de_2() {
 
         //Given
         PrintStream stdout = System.out;
-        String entrada = "1\n1\n5\n";
+        String entrada = "1\n0\n0\n5";
 
         System.setIn(new ByteArrayInputStream(entrada.getBytes()));
 
@@ -33,6 +33,6 @@ class MainCalculadoraTest {
         System.setOut(stdout);
 
 
-        assertTrue(salida.contains("El resultado es: 2"));
+        assertTrue(salida.contains("El resultado es: 0"));
     }
 }
