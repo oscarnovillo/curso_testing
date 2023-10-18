@@ -13,7 +13,7 @@ class MainCalculadoraTest {
 
     @Test
     @DisplayName("Sumar 0 y 0 para que de 0")
-    void sumar_1_y_1_para_que_de_2() {
+    void sumar0y0() {
 
         //Given
         PrintStream stdout = System.out;
