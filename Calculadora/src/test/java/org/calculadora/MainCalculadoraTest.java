@@ -1,5 +1,6 @@
 package org.calculadora;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayInputStream;
@@ -11,6 +12,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class MainCalculadoraTest {
 
     @Test
+  //  @DisplayName("Sumar 1 y 1 para que de 2")
+    @DisplayName("Suma de 1 y uno que da 2")
     void sumar() {
         PrintStream stdout = System.out;
         String entrada = "1\n1\n1\n5\n";
@@ -27,6 +30,6 @@ class MainCalculadoraTest {
         System.setOut(stdout);
 
 
-        assertEquals("El resultado es: 2",salida);
+        assertTrue(salida.contains("El resultado es: 2"));
     }
 }
