@@ -21,6 +21,8 @@ class MainCalculadoraTest {
                 {"2\n1\n2\n5\n",": -1"},
                 {"3\n3\n3\n5\n",": 9"},
                 {"4\n10\n3\n5\n",": 3"},
+                {"4\n0\n3\n5\n",": 0"},
+                {"6\n5\n","Opción no válida"},
         };
         PrintStream stdout = System.out;
         //String entrada = "1\n1\n1\n5\n";
@@ -38,7 +40,7 @@ class MainCalculadoraTest {
             System.setOut(stdout);
 
             //assertEquals("El resultado es: 2\nHas elegido salir\n",salida);
-            assertTrue(salida.contains(caso[1]));
+            assertTrue(salida.toLowerCase().contains(caso[1].toLowerCase()));
         } // for :
     }
 }

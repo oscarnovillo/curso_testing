@@ -64,7 +64,7 @@ public class MainCalculadora {
                     System.out.println("Has elegido salir");
                     break;
                 default:
-                    System.out.println("Opcion no valida");
+                    System.out.println("Opción no válida");
                     break;
             }
 
