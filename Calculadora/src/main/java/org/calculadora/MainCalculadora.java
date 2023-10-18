@@ -4,15 +4,17 @@ import java.util.Scanner;
 
 public class MainCalculadora {
 
+    public static final String INTRODUCE_EL_PRIMER_NUMERO = "Introduce el primer numero";
+
     public static void main(String[] args) {
 
 
         // Quiero una calculadora con un menu en un switch con sumar, restar, dividir y multiplicar
         // Quiero que me pida dos numeros y me devuelva el resultado
-    	
+
         // sacar un menu a consola con las opciones de una calculadora
-    	
-        Scanner sc = new Scanner(System.in);
+
+        Scanner scanerc = new Scanner(System.in);
         int opcion = 0;
 
         do {
@@ -23,40 +25,40 @@ public class MainCalculadora {
             System.out.println("4. Dividir");
             System.out.println("5. Salir");
             System.out.println("Introduce una opcion");
-            opcion = sc.nextInt();
+            opcion = scanerc.nextInt();
 
             switch (opcion)
             {
                 case 1:
                     System.out.println("Has elegido sumar");
-                    System.out.println("Introduce el primer numero");
-                    int num1 = sc.nextInt();
+                    System.out.println(INTRODUCE_EL_PRIMER_NUMERO);
+                    int num1 = scanerc.nextInt();
                     System.out.println("Introduce el segundo numero");
-                    int num2 = sc.nextInt();
+                    int num2 = scanerc.nextInt();
                     System.out.println("El resultado es: " + (num1 + num2));
                     break;
                 case 2:
                     System.out.println("Has elegido restar");
-                    System.out.println("Introduce el primer numero");
-                    int num3 = sc.nextInt();
+                    System.out.println(INTRODUCE_EL_PRIMER_NUMERO);
+                    int num3 = scanerc.nextInt();
                     System.out.println("Introduce el segundo numero");
-                    int num4 = sc.nextInt();
+                    int num4 = scanerc.nextInt();
                     System.out.println("El resultado es: " + (num3 - num4));
                     break;
                 case 3:
                     System.out.println("Has elegido multiplicar");
-                    System.out.println("Introduce el primer numero");
-                    int num5 = sc.nextInt();
+                    System.out.println(INTRODUCE_EL_PRIMER_NUMERO);
+                    int num5 = scanerc.nextInt();
                     System.out.println("Introduce el segundo numero");
-                    int num6 = sc.nextInt();
+                    int num6 = scanerc.nextInt();
                     System.out.println("El resultado es: " + (num5 * num6));
                     break;
                 case 4:
                     System.out.println("Has elegido dividir");
-                    System.out.println("Introduce el primer numero");
-                    int num7 = sc.nextInt();
+                    System.out.println(INTRODUCE_EL_PRIMER_NUMERO);
+                    int num7 = scanerc.nextInt();
                     System.out.println("Introduce el segundo numero");
-                    int num8 = sc.nextInt();
+                    int num8 = scanerc.nextInt();
                     System.out.println("El resultado es: " + (num7 / num8));
                     break;
                 case 5:
