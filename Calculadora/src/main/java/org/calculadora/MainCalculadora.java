@@ -13,7 +13,7 @@ public class MainCalculadora {
         // sacar un menu a consola con las opciones de una calculadora
     	
         Scanner sc = new Scanner(System.in);
-        int opcion = 0;
+        int opcion;
 
         do {
             System.out.println("Bienvenido a la calculadora");
@@ -26,46 +26,41 @@ public class MainCalculadora {
 
             opcion = sc.nextInt();
 
-            switch (opcion)
-            {
-                case 1:
+            switch (opcion) {
+                case 1 -> {
                     System.out.println("Has elegido sumar");
                     System.out.println("Introduce el primer numero");
                     int num1 = sc.nextInt();
                     System.out.println("Introduce el segundo numero");
                     int num2 = sc.nextInt();
                     System.out.println("El resultado es: " + (num1 + num2));
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     System.out.println("Has elegido restar");
                     System.out.println("Introduce el primer numero");
                     int num3 = sc.nextInt();
                     System.out.println("Introduce el segundo numero");
                     int num4 = sc.nextInt();
                     System.out.println("El resultado es: " + (num3 - num4));
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     System.out.println("Has elegido multiplicar");
                     System.out.println("Introduce el primer numero");
                     int num5 = sc.nextInt();
                     System.out.println("Introduce el segundo numero");
                     int num6 = sc.nextInt();
                     System.out.println("El resultado es: " + (num5 * num6));
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     System.out.println("Has elegido dividir");
                     System.out.println("Introduce el primer numero");
                     int num7 = sc.nextInt();
                     System.out.println("Introduce el segundo numero");
                     int num8 = sc.nextInt();
                     System.out.println("El resultado es: " + (num7 / num8));
-                    break;
-                case 5:
-                    System.out.println("Has elegido salir");
-                    break;
-                default:
-                    System.out.println("Opción no válida");
-                    break;
+                }
+                case 5 -> System.out.println("Has elegido salir");
+                default -> System.out.println("Opción no válida");
             }
 
         } while (opcion != 5);
