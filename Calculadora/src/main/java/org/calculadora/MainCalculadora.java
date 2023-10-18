@@ -3,6 +3,9 @@ package org.calculadora;
 import java.util.Scanner;
 
 public class MainCalculadora {
+public static final String BIENVENIDO="Bienvenido a la calculadora";
+    public static final String OPCION_NO_VALIDA = "Opcion no valida";
+    public static final String HAS_ELEGIDO_SALIR = "Has elegido salir";
 
     public static void main(String[] args) {
 
@@ -16,7 +19,7 @@ public class MainCalculadora {
         int opcion = 0;
 
         do {
-            System.out.println("Bienvenido a la calculadora");
+            System.out.println(BIENVENIDO);
             System.out.println("1. Sumar");
             System.out.println("2. Restar");
             System.out.println("3. Multiplicar");
@@ -60,10 +63,11 @@ public class MainCalculadora {
                     System.out.println("El resultado es: " + (num7 / num8));
                     break;
                 case 5:
-                    System.out.println("Has elegido salir");
+                    System.out.println(HAS_ELEGIDO_SALIR);
                     break;
                 default:
-                    System.out.println("Opcion no valida");
+                    System.out.println(OPCION_NO_VALIDA);
+
                     break;
             }
 
