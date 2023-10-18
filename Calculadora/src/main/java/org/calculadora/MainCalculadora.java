@@ -67,7 +67,6 @@ public static final String BIENVENIDO="Bienvenido a la calculadora";
                     break;
                 default:
                     System.out.println(OPCION_NO_VALIDA);
-
                     break;
             }
 
