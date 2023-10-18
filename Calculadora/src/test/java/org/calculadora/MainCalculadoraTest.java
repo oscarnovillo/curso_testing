@@ -52,4 +52,24 @@ class MainCalculadoraTest {
 
         assertTrue(salida.contains("El resultado es: 2"));
     }
+    @Test
+    @DisplayName("2 por 3 que da 6")
+    void multiplicar() {
+        PrintStream stdout = System.out;
+        String entrada = "1\n1\n1\n5\n";
+
+        System.setIn(new ByteArrayInputStream(entrada.getBytes()));
+
+        var byteArrayOutputStream  = new ByteArrayOutputStream(1000);
+        System.setOut(new PrintStream(byteArrayOutputStream));
+
+        MainCalculadora.main(null);
+
+        String salida = byteArrayOutputStream.toString();
+
+        System.setOut(stdout);
+
+
+        assertTrue(salida.contains("El resultado es: 6"));
+    }
 }
