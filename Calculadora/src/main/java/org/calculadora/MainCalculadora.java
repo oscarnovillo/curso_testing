@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class MainCalculadora {
 
+    public static String OPCION_NO_VALIDA = "Opción no válida";
     public static void main(String[] args) {
 
 
@@ -63,7 +64,7 @@ public class MainCalculadora {
                     System.out.println("Has elegido salir");
                     break;
                 default:
-                    System.out.println("Opcion no valida");
+                    System.out.println(OPCION_NO_VALIDA);
                     break;
             }
 
