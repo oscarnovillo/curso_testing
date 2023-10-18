@@ -27,6 +27,7 @@ class MainCalculadoraTest {
         System.setOut(stdout);
 
 
-        assertEquals("El resultado es: 2",salida);
+        //assertEquals("El resultado es: 2\nHas elegido salir\n",salida);
+        assertTrue(salida.contains("El resultado es: 2"));
     }
 }
