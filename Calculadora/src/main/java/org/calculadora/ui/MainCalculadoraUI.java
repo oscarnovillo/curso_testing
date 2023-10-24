@@ -76,7 +76,7 @@ public class MainCalculadoraUI {
         System.out.println("El resultado es: " + serviciosCalculadora.resta(num3 ,num4));
     }
 
-    private static void suma(Scanner scanerc, PrintStream out, ServiciosCalculadora serviciosCalculadora) {
+    public static void suma(Scanner scanerc, PrintStream out, ServiciosCalculadora serviciosCalculadora) {
         out.println("Has elegido sumar");
         out.println(INTRODUCE_EL_PRIMER_NUMERO);
         int num1 = scanerc.nextInt();
