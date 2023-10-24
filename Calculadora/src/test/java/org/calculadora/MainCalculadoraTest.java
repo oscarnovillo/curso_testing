@@ -17,7 +17,7 @@ class MainCalculadoraTest {
 
         //Given
         PrintStream stdout = System.out;
-        String entrada = "1\n1\n5\n";
+        String entrada = "1\n1\n1\n5\n";
 
         System.setIn(new ByteArrayInputStream(entrada.getBytes()));
 
@@ -32,7 +32,7 @@ class MainCalculadoraTest {
 
         System.setOut(stdout);
 
-        //comentario nuevo
+        //comentario nuevo 
         assertTrue(salida.contains("El resultado es: 2"));
     }
 }
