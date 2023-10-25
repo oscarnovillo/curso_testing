@@ -42,7 +42,7 @@ class MainCalculadoraTest {
 
         var byteArrayOutputStream  = new ByteArrayOutputStream(1000);
         System.setOut(new PrintStream(byteArrayOutputStream));
-
+// comentario
         MainCalculadora.main(null);
 
         String salida = byteArrayOutputStream.toString();
