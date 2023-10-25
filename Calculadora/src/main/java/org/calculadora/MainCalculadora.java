@@ -6,7 +6,7 @@ public class MainCalculadora {
 
     public static final String INTRODUCE_EL_PRIMER_NUMERO = "Introduce el primer numero";
 
-    public static void main(String[] args) {
+    public static void main(String[] argumentos) {
 
 
         // Quiero una calculadora con un menu en un switch con sumar, restar, dividir y multiplicar

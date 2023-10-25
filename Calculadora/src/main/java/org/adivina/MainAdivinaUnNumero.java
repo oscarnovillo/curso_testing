@@ -7,9 +7,17 @@ public class MainAdivinaUnNumero {
 
     public static void main(String[] args) {
 
-
         Random r = new Random();
         int numeroAleatorio = r.nextInt(100);
+        Scanner sc = new Scanner(System.in);
+        adivinaUnNumero(sc,numeroAleatorio);
+
+
+    }
+
+    public static void adivinaUnNumero(Scanner sc,int numeroAleatorio) {
+
+
 
         // diez oportunidades para adivinar el numero
         // si acierta, salir del bucle
@@ -18,7 +26,7 @@ public class MainAdivinaUnNumero {
 
         int intentos = 0;
         int numero = 0;
-        Scanner sc = new Scanner(System.in);
+
         while (intentos <10){
             System.out.println("Te quedan " + (10 - intentos) + " intentos");
             System.out.println("Introduce un numero");
@@ -38,8 +46,6 @@ public class MainAdivinaUnNumero {
         if (intentos == 10){
             System.out.println("Has perdido");
         }
-
-
     }
 
 }
