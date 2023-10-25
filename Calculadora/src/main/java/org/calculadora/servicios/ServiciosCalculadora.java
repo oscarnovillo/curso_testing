@@ -1,5 +1,7 @@
 package org.calculadora.servicios;
 
+import org.Error.NosePuedeDivividirException;
+
 public class ServiciosCalculadora {
 
 
@@ -15,7 +17,10 @@ public class ServiciosCalculadora {
         return a*b;
     }
 
-    public int division(int a, int b){
+    public int division(int a, int b)  {
+        if (b== 0){
+            throw new NosePuedeDivividirException("/ by zero");
+        }
         return a/b;
     }
 }
