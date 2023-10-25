@@ -33,7 +33,7 @@ class MainCalculadoraTest {
 
         System.setOut(stdout);
 
-        //comentario nuevo
+        //comentario nuevo 
         assertTrue(salida.contains("El resultado es: 2"));
     }
 
