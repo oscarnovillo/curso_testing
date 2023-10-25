@@ -10,7 +10,7 @@ public class MainAdivinaUnNumero {
 
         Random r = new Random();
         int numeroAleatorio = r.nextInt(100);
-
+//hola
         // diez oportunidades para adivinar el numero
         // si acierta, salir del bucle
         // si no acierta, decir si es mayor o menor

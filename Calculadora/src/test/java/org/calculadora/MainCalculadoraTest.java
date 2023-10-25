@@ -57,7 +57,7 @@ class MainCalculadoraTest {
     void multiplicar() {
         PrintStream stdout = System.out;
         String entrada = "1\n1\n1\n5\n";
-
+//fasdf
         System.setIn(new ByteArrayInputStream(entrada.getBytes()));
 
         var byteArrayOutputStream  = new ByteArrayOutputStream(1000);
