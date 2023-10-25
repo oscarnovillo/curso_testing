@@ -11,13 +11,15 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class MainCalculadoraUITest {
+class UiSumaTest {
 
+    //class under test
+    UiSuma ui  = new UiSuma();
 
     @Mock
     ServiciosCalculadora serviciosCalculadora;
@@ -25,15 +27,30 @@ class MainCalculadoraUITest {
     void main() {
     }
 
+
+
     @Test
     void suma() {
         Scanner sc = new Scanner("1\n1");
-        serviciosCalculadora = mock(ServiciosCalculadora.class);
+
         var o  = new ByteArrayOutputStream(1000);
         PrintStream out = new PrintStream(o);
         when(serviciosCalculadora.suma(1,1)).thenReturn(2);
 
-        MainCalculadoraUI.suma(sc,out,serviciosCalculadora);
+        ui.suma(sc,out,serviciosCalculadora);
+        String salida = new String(o.toByteArray());
+
+        assertThat(salida).contains("2");
+    }
+    @Test
+    void sumaConError(){
+        Scanner sc = new Scanner("1\n1");
+
+        var o  = new ByteArrayOutputStream(1000);
+        PrintStream out = new PrintStream(o);
+        when(serviciosCalculadora.suma(1,1)).thenReturn(2);
+
+        ui.suma(sc,out,serviciosCalculadora);
         String salida = new String(o.toByteArray());
 
         assertThat(salida).contains("2");
