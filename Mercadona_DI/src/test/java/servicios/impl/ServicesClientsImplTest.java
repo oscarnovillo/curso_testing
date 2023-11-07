@@ -2,7 +2,9 @@ package servicios.impl;
 
 import data.DaoClients;
 import data.impl.DaoClientsImpl;
+import modelo.ClientWithDiscount;
 import modelo.error.ErrorClientAccounts;
+import nl.altindag.log.LogCaptor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -97,6 +99,13 @@ class ServicesClientsImplTest {
 
     @Test
     void isClientWithDiscount() {
+        try (LogCaptor logCaptor = LogCaptor.forClass(ServicesClientsImpl.class)) {
+            ClientWithDiscount c = new ClientWithDiscount("123", "pepe", 10);
+            servicesClients.isClientWithDiscount(c);
+
+            assertThat(logCaptor.getDebugLogs().get(0)).isEqualTo("isClientWithDiscount: ");
+        }
+
     }
 
     @Test

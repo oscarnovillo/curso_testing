@@ -3,6 +3,7 @@ package servicios.impl;
 import data.DaoClients;
 import io.vavr.control.Either;
 import jakarta.inject.Inject;
+import lombok.extern.log4j.Log4j2;
 import modelo.Client;
 import modelo.ClientWithDiscount;
 import modelo.Ingredient;
@@ -11,7 +12,7 @@ import modelo.error.ErrorIngredient;
 import servicios.ServicesClients;
 
 import java.util.List;
-
+@Log4j2
 public class ServicesClientsImpl implements ServicesClients {
 
     private final DaoClients daoClients;
@@ -43,6 +44,7 @@ public class ServicesClientsImpl implements ServicesClients {
     }
 
     @Override public boolean isClientWithDiscount(Client client) {
+        log.debug("isClientWithDiscount: ");
         return client.getClass() == ClientWithDiscount.class;
     }
 
