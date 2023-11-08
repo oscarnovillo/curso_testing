@@ -2,16 +2,21 @@ package servicios.impl;
 
 import data.DaoClients;
 import data.impl.DaoClientsImpl;
+import modelo.Client;
+import modelo.ClientNormal;
+import modelo.ClientWithDiscount;
 import modelo.error.ErrorClientAccounts;
+import nl.altindag.log.LogCaptor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.api.Nested;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.jupiter.MockitoExtension;
+
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
@@ -29,13 +34,9 @@ class ServicesClientsImplTest {
     DaoClients daoClients;
 
 
-
-
-
     @BeforeEach
     void setUp() {
-//        daoClients = mock(DaoClientsImpl.class);
-//        servicesClients = new ServicesClientsImpl(daoClients);
+
 
     }
 
@@ -53,13 +54,56 @@ class ServicesClientsImplTest {
 
     @Test
     void printClientList() {
+        //given
 
+        List<Client> list = List.of(new ClientNormal("123", "pepe"));
+        when(daoClients.showClientList()).thenReturn(list);
 
+        //when
+        List<Client> lista = servicesClients.printClientList();
 
+        //then
+        assertThat(lista).containsAll(list);
     }
 
     @Test
     void getClient() {
+        //given
+
+        Client clientPrueba = new ClientNormal("123", "pepe");
+        when(daoClients.getClient(any())).thenReturn(clientPrueba);
+
+        //when
+        Client respuesta = servicesClients.getClient("123");
+        //then
+        assertThat(respuesta).isEqualTo(clientPrueba);
+    }
+
+    @Test
+    void isClientWithDiscount() {
+        try (LogCaptor logCaptor = LogCaptor.forClass(ServicesClientsImpl.class)) {
+            ClientWithDiscount c = new ClientWithDiscount("123", "pepe", 10);
+            servicesClients.isClientWithDiscount(c);
+
+            assertThat(logCaptor.getDebugLogs().get(0)).isEqualTo("isClientWithDiscount: ");
+        }
+
+    }
+
+    @Test
+    void addClient() {
+    }
+
+    @Test
+    void changeDni() {
+    }
+
+    @Test
+    void changeName() {
+    }
+
+    @Test
+    void addAllergen() {
     }
 
     @Nested
@@ -92,15 +136,6 @@ class ServicesClientsImplTest {
             assertThat(error).isEqualTo(ErrorClientAccounts.NOT_FOUND);
 
         }
-    }
-
-
-    @Test
-    void isClientWithDiscount() {
-    }
-
-    @Test
-    void addClient() {
     }
 
     @Nested
@@ -141,17 +176,5 @@ class ServicesClientsImplTest {
 
         }
 
-    }
-
-    @Test
-    void changeDni() {
-    }
-
-    @Test
-    void changeName() {
-    }
-
-    @Test
-    void addAllergen() {
     }
 }

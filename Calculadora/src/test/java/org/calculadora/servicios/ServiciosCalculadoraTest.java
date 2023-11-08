@@ -1,5 +1,7 @@
 package org.calculadora.servicios;
 
+import org.Error.NosePuedeDivividirException;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.atomic.AtomicReference;
@@ -11,43 +13,70 @@ import static org.junit.jupiter.api.Assertions.*;
 class ServiciosCalculadoraTest {
 
 
+    ServiciosCalculadora sc;
+
+    @BeforeEach
+    void setUp() {
+        sc = new ServiciosCalculadora();
+    }
+
+
 
     @Test
     void suma() {
 
-        ServiciosCalculadora sc = new ServiciosCalculadora();
 
         int resultado  =  sc.suma(1,1);
 
-
-
-        assertEquals(2, resultado);
-
+        assertThat(2).isEqualTo(resultado);
     }
 
     @Test
     void resta() {
-        ServiciosCalculadora sc = new ServiciosCalculadora();
 
+        int resultado  =  sc.resta(1,1);
+
+        assertEquals(0, resultado);
     }
 
     @Test
+    void multiplicacion() {
+
+        int resultado  =  sc.multiplicacion(2,2);
+
+        assertEquals(4, resultado);
+    }
+
+
+    @Test
     void division(){
-        ServiciosCalculadora sc = new ServiciosCalculadora();
+        //Given
+
+
+        //when
         Throwable t = catchThrowable(() -> sc.division(1,0));
 
+
+
+        //then
         assertThat(t)
-                .isInstanceOf(ArithmeticException.class)
+                .isInstanceOf(NosePuedeDivividirException.class)
                 .hasMessageContaining("/ by zero");
 
     }
 
     @Test
     void divisionBien(){
-        ServiciosCalculadora sc = new ServiciosCalculadora();
+
         final int[] resultado = new int[1];
+
+
         Throwable t = catchThrowable(() -> {
-            resultado[0] = sc.division(1, 1);});
+            resultado[0] = sc.division(1, 1);
+        });
+
+        assertThat(t).doesNotThrowAnyException();
+        assertThat(resultado[0]).isEqualTo(1);
 
         assertAll(
                 () -> assertThat(t).doesNotThrowAnyException(),
