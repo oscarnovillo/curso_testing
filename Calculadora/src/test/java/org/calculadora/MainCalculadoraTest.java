@@ -22,7 +22,7 @@ class MainCalculadoraTest {
 
         System.setIn(new ByteArrayInputStream(entrada.getBytes()));
 
-        var byteArrayOutputStream  = new ByteArrayOutputStream(1000);
+        var byteArrayOutputStream = new ByteArrayOutputStream(1000);
         System.setOut(new PrintStream(byteArrayOutputStream));
 
         //When
@@ -102,3 +102,4 @@ class MainCalculadoraTest {
 
         assertTrue(salida.contains("El resultado es: 2"));
     }
+}
