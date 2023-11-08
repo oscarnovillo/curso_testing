@@ -6,6 +6,7 @@ public class ServiciosCalculadora {
 
 
     public int suma(int a, int b){
+        System.out.println("estoy en el metodo suma");
         return a+b;
     }
 
