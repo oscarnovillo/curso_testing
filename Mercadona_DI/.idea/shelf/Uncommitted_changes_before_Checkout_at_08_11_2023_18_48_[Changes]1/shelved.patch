@@ -1,0 +1,22 @@
+Index: ../Calculadora/src/test/java/org/calculadora/SaludaTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../Calculadora/src/test/java/org/calculadora/SaludaTest.java b/../Calculadora/src/test/java/org/calculadora/SaludaTest.java
+new file mode 100644
+--- /dev/null	
++++ b/../Calculadora/src/test/java/org/calculadora/SaludaTest.java	
+@@ -0,0 +1,12 @@
++package org.calculadora;
++
++import org.junit.jupiter.api.Test;
++
++public class SaludaTest {
++
++    @Test
++    void saluda() {
++        Saluda saluda = new Saluda();
++        saluda.saluda();
++    }
++}

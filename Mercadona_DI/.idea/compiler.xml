@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
+<<<<<<< Updated upstream
       <profile name="Annotation profile for Mercadona" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -13,5 +14,11 @@
         <module name="Mercadona" />
       </profile>
     </annotationProcessing>
+=======
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Mercadona" target="17" />
+    </bytecodeTargetLevel>
+>>>>>>> Stashed changes
   </component>
 </project>
