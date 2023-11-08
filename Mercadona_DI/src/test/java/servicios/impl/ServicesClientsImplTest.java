@@ -2,7 +2,11 @@ package servicios.impl;
 
 import data.DaoClients;
 import data.impl.DaoClientsImpl;
+import modelo.Client;
+import modelo.ClientNormal;
+import modelo.Ingredient;
 import modelo.error.ErrorClientAccounts;
+import modelo.error.ErrorIngredient;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,20 +22,12 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class ServicesClientsImplTest {
-
-
     //class under test
     @InjectMocks
-    ServicesClientsImpl servicesClients;
-
+    ServicesClientsImpl servicesClients;  //La clase en la que estás probando
     //dependencias
     @Mock
-    DaoClients daoClients;
-
-
-
-
-
+    DaoClients daoClients;  //La clase de la que neceistas objetos para los mocks
     @BeforeEach
     void setUp() {
 //        daoClients = mock(DaoClientsImpl.class);
@@ -51,11 +47,9 @@ class ServicesClientsImplTest {
         assertThat(respuesta).isTrue();
     }
 
+
     @Test
     void printClientList() {
-
-
-
     }
 
     @Test
@@ -151,7 +145,33 @@ class ServicesClientsImplTest {
     void changeName() {
     }
 
+
     @Test
-    void addAllergen() {
+    void addAllergenOK() {
+        Client cli=new ClientNormal("123", "pepe");
+        Ingredient ing=new Ingredient("pera");
+        //given
+        when(daoClients.containsAllergen(cli, ing)).thenReturn(false);
+        //when
+        boolean respuesta = servicesClients.isEmptyClientList();
+        ErrorIngredient error=  servicesClients.addAllergen(cli,ing);
+        //then
+        assertThat(error).isNull();
+        verify(daoClients).addAllergen(cli,ing);
+    }
+    @Test
+    void addAllergenError() {
+        Client cli=new ClientNormal("123", "pepe");
+        Ingredient ing=new Ingredient("pera");
+
+        //given
+        when(daoClients.containsAllergen(cli, ing)).thenReturn(true);
+
+        //when
+        boolean respuesta = servicesClients.isEmptyClientList();
+        ErrorIngredient error=  servicesClients.addAllergen(cli,ing);
+
+        //then
+        assertThat(error).isEqualTo(ErrorIngredient.DUPLICATED);
     }
 }
