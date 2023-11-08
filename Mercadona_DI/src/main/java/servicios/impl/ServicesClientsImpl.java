@@ -1,8 +1,10 @@
 package servicios.impl;
 
 import data.DaoClients;
+import data.impl.DaoClientsImpl;
 import io.vavr.control.Either;
 import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import lombok.extern.log4j.Log4j2;
 import modelo.Client;
 import modelo.ClientWithDiscount;
@@ -14,6 +16,7 @@ import servicios.ServicesClients;
 import java.util.List;
 @Log4j2
 public class ServicesClientsImpl implements ServicesClients {
+
 
     private final DaoClients daoClients;
 
@@ -35,6 +38,7 @@ public class ServicesClientsImpl implements ServicesClients {
     }
 
     @Override public ErrorClientAccounts containsClient(String dni) {
+
         ErrorClientAccounts error = null;
         if (!daoClients.containsClient(dni)) {
             error = ErrorClientAccounts.NOT_FOUND;

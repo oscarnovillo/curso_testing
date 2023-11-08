@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 public class ClientNormal extends Client {
 
+
     public ClientNormal(String name, String dni) {
         super(name, dni);
         type = "ClientNormal";

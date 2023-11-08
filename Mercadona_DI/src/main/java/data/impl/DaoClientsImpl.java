@@ -3,6 +3,7 @@ package data.impl;
 import data.DaoClients;
 import io.vavr.control.Either;
 import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import modelo.Client;
 import modelo.Ingredient;
 
@@ -12,6 +13,8 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
+
+@Named("mm")
 public class DaoClientsImpl extends DaoBase implements DaoClients {
     private final DataBase dataBase;
 

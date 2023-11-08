@@ -13,6 +13,8 @@ public abstract class Client implements Comparable<Client>,Clonable<Client>{
     private List<List<SelectedProduct>> previousPurchases;
     private List<Ingredient> allergens;
 
+
+
     public Client() {
         wallets = new HashSet<>();
         shoppingCart = new ArrayList<>();
