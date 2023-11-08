@@ -1,0 +1,5 @@
+
+i
+java:S1192"NDefine a constant instead of duplicating this literal "ProductNormal" 3 times.(º·Ú™ûÿÿÿÿ
+y
+java:S6204+"^Replace this usage of 'Stream.collect(Collectors.toUnmodifiableList())' with 'Stream.toList()'(€„íÙùÿÿÿÿ

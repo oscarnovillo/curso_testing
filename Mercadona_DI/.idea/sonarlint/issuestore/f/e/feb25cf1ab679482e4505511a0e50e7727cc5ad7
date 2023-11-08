@@ -1,0 +1,13 @@
+
+‡
+java:S1319"jThe type of "inventario" should be an interface such as "List" rather than the implementation "ArrayList".(µ”Ñ8·“¥ßº1
+?
+java:S2386"Make this member "protected".(ÂÇüÿÿÿÿ8»“¥ßº1
+:
+java:S2386"Make this member "protected".(µ”Ñ8»“¥ßº1
+J
+java:S1128"-Remove this unused import 'data.DaoProducts'.(‹£Ì8Á“¥ßº1
+X
+java:S1128"6Remove this unused import 'data.impl.DaoProductsImpl'.(°Èóÿüÿÿÿÿ8Á“¥ßº1
+V
+java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ8Á“¥ßº1

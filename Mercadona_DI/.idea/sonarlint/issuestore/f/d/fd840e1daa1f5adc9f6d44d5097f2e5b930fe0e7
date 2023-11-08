@@ -1,0 +1,7 @@
+
+y
+java:S62049"^Replace this usage of 'Stream.collect(Collectors.toUnmodifiableList())' with 'Stream.toList()'(»À½¯ûÿÿÿÿ
+y
+java:S6204<"^Replace this usage of 'Stream.collect(Collectors.toUnmodifiableList())' with 'Stream.toList()'(€„íÙùÿÿÿÿ
+y
+java:S6204;"^Replace this usage of 'Stream.collect(Collectors.toUnmodifiableList())' with 'Stream.toList()'(¿÷»Ëøÿÿÿÿ
