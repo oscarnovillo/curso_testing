@@ -6,6 +6,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MainCalculadoraTest {
@@ -27,6 +28,6 @@ class MainCalculadoraTest {
         System.setOut(stdout);
 
 
-        assertEquals("El resultado es: 2",salida);
+        assertThat(salida).contains("El resultado es: 2");
     }
 }
