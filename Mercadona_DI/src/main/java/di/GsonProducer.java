@@ -4,7 +4,10 @@ import com.google.gson.*;
 import common.ConstantsDataBase;
 import config.Configuracion;
 import gsonutils.RuntimeTypeAdapterFactory;
+
 import jakarta.enterprise.inject.Produces;
+
+
 import jakarta.inject.Named;
 import modelo.*;
 
@@ -14,6 +17,7 @@ import java.time.LocalDateTime;
 
 public class GsonProducer {
     @Produces
+    @Named("gson")
     public Gson gson() {
         RuntimeTypeAdapterFactory<Client> clientAdapter =
                 RuntimeTypeAdapterFactory
