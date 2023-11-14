@@ -4,12 +4,13 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import common.ConstantsConfig;
-import jakarta.ejb.Singleton;
+
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Default;
-import jakarta.inject.Named;
+
 import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
+import jakarta.inject.Singleton;
 
 import java.io.IOException;
 

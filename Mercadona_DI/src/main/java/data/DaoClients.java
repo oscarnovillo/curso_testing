@@ -27,5 +27,5 @@ public interface DaoClients {
 
     boolean containsAllergen(Client client, Ingredient allergen);
 
-    void addAllergen(Client client, Ingredient allergen);
+    boolean addAllergen(Client client, Ingredient allergen);
 }

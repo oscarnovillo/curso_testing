@@ -5,7 +5,9 @@ import data.impl.DaoClientsImpl;
 import modelo.Client;
 import modelo.ClientNormal;
 import modelo.ClientWithDiscount;
+import modelo.Ingredient;
 import modelo.error.ErrorClientAccounts;
+import modelo.error.ErrorIngredient;
 import nl.altindag.log.LogCaptor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -103,8 +105,37 @@ class ServicesClientsImplTest {
     }
 
     @Test
+    @DisplayName("añadir alergeno que existe")
     void addAllergen() {
+        //GIVEN
+        Client c = new ClientNormal("123","pepe");
+        Ingredient i = new Ingredient("cacahuete");
+        when(daoClients.containsAllergen(c, i)).thenReturn(true);
+
+        //when
+        ErrorIngredient error = servicesClients.addAllergen(c,i);
+
+        //then
+        assertThat(error).isEqualTo(ErrorIngredient.DUPLICATED);
     }
+
+    @Test
+    @DisplayName("añadir alergeno que no existe")
+    void addAllergenNoExiste() {
+        //GIVEN
+        Client c = new ClientNormal("123","pepe");
+        Ingredient i = new Ingredient("cacahuete");
+        when(daoClients.containsAllergen(c, i)).thenReturn(false);
+
+        //when
+        ErrorIngredient error = servicesClients.addAllergen(c,i);
+
+        //then
+        assertThat(error).isNull();
+        verify(daoClients).addAllergen(c,i);
+    }
+
+
 
     @Nested
     @DisplayName("Test de getClient")

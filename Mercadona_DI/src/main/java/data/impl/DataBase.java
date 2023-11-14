@@ -33,7 +33,7 @@ public class DataBase {
     private final Configuracion configuracion;
 
     @Inject
-    public DataBase(Gson gson, Configuracion configuracion) {
+    public DataBase(@Named("gson") Gson gson, Configuracion configuracion) {
         this.gson = gson;
         this.configuracion = configuracion;
     }

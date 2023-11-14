@@ -89,10 +89,11 @@ public class DaoClientsImpl extends DaoBase implements DaoClients {
     }
 
     @Override
-    public void addAllergen(Client client, Ingredient allergen) {
+    public boolean addAllergen(Client client, Ingredient allergen) {
         Map<String, Client> clientList = dataBase.loadClientes();
         clientList.get(client.getDni()).getAllergens().add(allergen);
         dataBase.saveClientes(clientList);
+        return true;
     }
 
 
