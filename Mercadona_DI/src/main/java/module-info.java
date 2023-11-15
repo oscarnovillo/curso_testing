@@ -15,6 +15,7 @@ module Mercadona {
     opens config;
     opens data.bd;
     opens modelo.common;
+    opens modelo;
 
     exports ui;
     exports di;
@@ -23,6 +24,7 @@ module Mercadona {
     exports config;
     exports data.impl;
     exports servicios.impl;
+    exports modelo;
 
 
 }

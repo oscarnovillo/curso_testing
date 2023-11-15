@@ -13,6 +13,7 @@ import lombok.extern.log4j.Log4j2;
 import jakarta.inject.Singleton;
 
 import java.io.IOException;
+import java.util.Properties;
 
 @Getter
 @Log4j2
@@ -24,6 +25,11 @@ public class Configuracion {
         mapper.findAndRegisterModules();
 
         try {
+            Properties p = new Properties();
+            p.load(Configuracion.class.getClassLoader()
+                    .getResourceAsStream("config.properties"));
+            this.pathDatosProducts = p.getProperty("pathDatosProducts");
+
             JsonNode node = mapper.readTree(
                     Configuracion.class.getClassLoader().getResourceAsStream(ConstantsConfig.CONFIG_YAML));
             this.pathDatosClients = node.get(ConstantsConfig.CONFIG_PATH_DATOS_CLIENTS).asText();

@@ -1,0 +1,3 @@
+pathDatosClients: test/data/cliente.json
+pathDatosProducts: test/data/products.json
+

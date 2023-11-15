@@ -1,0 +1,29 @@
+{
+  "1": {
+    "type": "ClientNormal",
+    "name": "BLA",
+    "dni": "1",
+    "wallets": [
+      {
+        "code": "1",
+        "money": 8.0
+      }
+    ],
+    "shoppingCart": [],
+    "previousPurchases": [
+      [
+        {
+          "product": {
+            "type": "ProductNormal",
+            "name": "PAN",
+            "price": 0.0,
+            "stock": 0
+          },
+          "quantity": 2,
+          "price": 2.0
+        }
+      ]
+    ],
+    "allergens": []
+  }
+}
