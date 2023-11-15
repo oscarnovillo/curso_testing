@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fde56cfc-5686-46ed-b3da-0974dbf8f2ca" name="Changes" comment="Añadidas más casos de prueba">
-      <change beforePath="$PROJECT_DIR$/Calculadora/src/main/java/org/calculadora/MainCalculadora.java" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora/src/main/java/org/calculadora/MainCalculadora.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculadora/src/test/java/org/calculadora/MainCalculadoraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora/src/test/java/org/calculadora/MainCalculadoraTest.java" afterDir="false" />
+    <list default="true" id="fde56cfc-5686-46ed-b3da-0974dbf8f2ca" name="Changes" comment="Vuelta atrás en intento de cambiar assertTrue por assertLinesMatch">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculadora/src/main/java/org/calculadora/ui/MainCalculadoraUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora/src/main/java/org/calculadora/ui/MainCalculadoraUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculadora/src/test/java/org/calculadora/ui/MainCalculadoraUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Calculadora/src/test/java/org/calculadora/ui/MainCalculadoraUITest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,10 +46,68 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "CalculadoraASacoPuche",
     "last_opened_file_path": "/home/javi/IdeaProjects/curso_testing"
   }
 }]]></component>
+  <component name="RunManager" selected="JUnit.MainCalculadoraUITest.divisiónPorCero">
+    <configuration name="MainCalculadoraUITest.division" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calculadora" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.calculadora.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.calculadora.ui" />
+      <option name="MAIN_CLASS_NAME" value="org.calculadora.ui.MainCalculadoraUITest" />
+      <option name="METHOD_NAME" value="division" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainCalculadoraUITest.división" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calculadora" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.calculadora.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.calculadora.ui" />
+      <option name="MAIN_CLASS_NAME" value="org.calculadora.ui.MainCalculadoraUITest" />
+      <option name="METHOD_NAME" value="división" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainCalculadoraUITest.divisiónPorCero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calculadora" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.calculadora.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.calculadora.ui" />
+      <option name="MAIN_CLASS_NAME" value="org.calculadora.ui.MainCalculadoraUITest" />
+      <option name="METHOD_NAME" value="divisiónPorCero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MainCalculadoraUITest.divisiónPorCero" />
+        <item itemvalue="JUnit.MainCalculadoraUITest.division" />
+        <item itemvalue="JUnit.MainCalculadoraUITest.división" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -85,10 +145,66 @@
       <option name="project" value="LOCAL" />
       <updated>1697647239649</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Añadidas más casos de prueba">
+      <created>1697647373898</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697647373898</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Corregidos warnings del IDE: inicialización de option redundante y cambio a switch avanzado en línea 29">
+      <created>1697647499008</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697647499008</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Vuelta atrás en intento de cambiar assertTrue por assertLinesMatch">
+      <created>1697648260492</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697648260492</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/CalculadoraASacoPuche" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="CalculadoraASacoPuche" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -99,7 +215,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="CalculadoraASacoPuche" />
+                        <option value="origin/CalculadoraASacoPuche" />
                       </list>
                     </value>
                   </entry>
@@ -117,7 +233,9 @@
     <MESSAGE value="Operaciones de test en una matriz con operaciones y resultado" />
     <MESSAGE value="Cambio a nombres de función y de variables representativos" />
     <MESSAGE value="Añadidas más casos de prueba" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadidas más casos de prueba" />
+    <MESSAGE value="Corregidos warnings del IDE: inicialización de option redundante y cambio a switch avanzado en línea 29" />
+    <MESSAGE value="Vuelta atrás en intento de cambiar assertTrue por assertLinesMatch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vuelta atrás en intento de cambiar assertTrue por assertLinesMatch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -126,6 +244,15 @@
           <properties class="java.util.NoSuchElementException" package="java.util" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/Calculadora/src/test/java/org/calculadora/ui/MainCalculadoraUITest.java</url>
+          <line>50</line>
+          <properties class="org.calculadora.ui.MainCalculadoraUITest" method="division">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

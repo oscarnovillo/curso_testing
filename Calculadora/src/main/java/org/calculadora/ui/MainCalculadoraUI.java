@@ -36,23 +36,13 @@ public class MainCalculadoraUI {
                     suma(scanerc, System.out, serviciosCalculadora);
                     break;
                 case 2:
-                    resta(scanerc, serviciosCalculadora);
+                    resta(scanerc, System.out, serviciosCalculadora);
                     break;
                 case 3:
-                    System.out.println("Has elegido multiplicar");
-                    System.out.println(INTRODUCE_EL_PRIMER_NUMERO);
-                    int num5 = scanerc.nextInt();
-                    System.out.println("Introduce el segundo numero");
-                    int num6 = scanerc.nextInt();
-                    System.out.println("El resultado es: " + (num5 * num6));
+                    multiplicación(scanerc,System.out,serviciosCalculadora);
                     break;
                 case 4:
-                    System.out.println("Has elegido dividir");
-                    System.out.println(INTRODUCE_EL_PRIMER_NUMERO);
-                    int num7 = scanerc.nextInt();
-                    System.out.println("Introduce el segundo numero");
-                    int num8 = scanerc.nextInt();
-                    System.out.println("El resultado es: " + (num7 / num8));
+                    división(scanerc,System.out,serviciosCalculadora);
                     break;
                 case 5:
                     System.out.println("Has elegido salir");
@@ -67,13 +57,29 @@ public class MainCalculadoraUI {
 
     }
 
-    private static void resta(Scanner scanerc, ServiciosCalculadora serviciosCalculadora) {
-        System.out.println("Has elegido restar");
-        System.out.println(INTRODUCE_EL_PRIMER_NUMERO);
+    private static void división(Scanner scanerc, PrintStream out, ServiciosCalculadora serviciosCalculadora) {
+        out.println("Has elegido dividir");
+        out.println(INTRODUCE_EL_PRIMER_NUMERO);
+        int num7 = scanerc.nextInt();
+        out.println("Introduce el segundo numero");
+        int num8 = scanerc.nextInt();
+        out.println("El resultado es: " + serviciosCalculadora.division(num7 , num8));
+    }
+    private static void multiplicación(Scanner scanerc, PrintStream out, ServiciosCalculadora serviciosCalculadora) {
+        out.println("Has elegido multiplicar");
+        out.println(INTRODUCE_EL_PRIMER_NUMERO);
+        int num5 = scanerc.nextInt();
+        out.println("Introduce el segundo numero");
+        int num6 = scanerc.nextInt();
+        out.println("El resultado es: " + serviciosCalculadora.multiplicacion(num5 , num6));
+    }
+    private static void resta(Scanner scanerc, PrintStream out, ServiciosCalculadora serviciosCalculadora) {
+        out.println("Has elegido restar");
+        out.println(INTRODUCE_EL_PRIMER_NUMERO);
         int num3 = scanerc.nextInt();
-        System.out.println("Introduce el segundo numero");
+        out.println("Introduce el segundo numero");
         int num4 = scanerc.nextInt();
-        System.out.println("El resultado es: " + serviciosCalculadora.resta(num3 ,num4));
+        out.println("El resultado es: " + serviciosCalculadora.resta(num3 ,num4));
     }
 
     public static void suma(Scanner scanerc, PrintStream out, ServiciosCalculadora serviciosCalculadora) {
