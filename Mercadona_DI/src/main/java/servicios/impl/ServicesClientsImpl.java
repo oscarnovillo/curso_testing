@@ -119,7 +119,7 @@ public class ServicesClientsImpl implements ServicesClients {
         if (daoClients.containsAllergen(client, allergen)) {
             error = ErrorIngredient.DUPLICATED;
         } else {
-            daoClients.addAllergen(client, allergen);
+             daoClients.addAllergen(client, allergen);
         }
 
         return error;

@@ -5,7 +5,9 @@ import data.impl.DaoClientsImpl;
 import modelo.Client;
 import modelo.ClientNormal;
 import modelo.ClientWithDiscount;
+import modelo.Ingredient;
 import modelo.error.ErrorClientAccounts;
+import modelo.error.ErrorIngredient;
 import nl.altindag.log.LogCaptor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -15,6 +17,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import servicios.ServicesClients;
 
 import java.util.List;
 
@@ -103,8 +106,40 @@ class ServicesClientsImplTest {
     }
 
     @Test
+    @DisplayName("Añadir alérgeno que existe")
     void addAllergen() {
+
+        //given
+        Client cli = new ClientNormal("123", "pepe");
+        Ingredient ing = new Ingredient("cacahuete");
+        when(daoClients.containsAllergen(cli, ing)).thenReturn(true);
+
+        //when
+        ErrorIngredient error = servicesClients.addAllergen(cli, ing);
+
+        //then
+        assertThat(error).isEqualTo(ErrorIngredient.DUPLICATED);
+
     }
+
+    @Test
+    @DisplayName("Añadir alérgeno que no existe")
+    void addAllergenNoExiste() {
+
+        //given
+        Client cli = new ClientNormal("123", "pepe");
+        Ingredient ing = new Ingredient("cacahuete");
+        when(daoClients.containsAllergen(cli, ing)).thenReturn(false);
+
+        //when
+        ErrorIngredient error = servicesClients.addAllergen(cli, ing);
+
+        //then
+        assertThat(error).isNull();
+        verify(daoClients).addAllergen(cli, ing);
+
+    }
+
 
     @Nested
     @DisplayName("Test de getClient")
@@ -112,7 +147,7 @@ class ServicesClientsImplTest {
         @Test
         void containsClient() {
             //given
-            String dni = "123";
+            String dni = "125";
             when(daoClients.containsClient(dni)).thenReturn(true);
 
             //when
@@ -172,8 +207,6 @@ class ServicesClientsImplTest {
 
             assertThat(respuesta).isNull();
             verify(daoClients, times(1)).removeClient(dni);
-
-
         }
 
     }
