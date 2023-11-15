@@ -8,6 +8,7 @@ import modelo.Client;
 import modelo.Ingredient;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
@@ -56,6 +57,7 @@ public class DaoClientsImpl extends DaoBase implements DaoClients {
         Map<String, Client> clientList = dataBase.loadClientes();
         clientList.put(client.getDni(), client);
         dataBase.saveClientes(clientList);
+
     }
 
     @Override

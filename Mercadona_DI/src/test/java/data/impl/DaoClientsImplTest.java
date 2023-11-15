@@ -4,10 +4,7 @@ import modelo.Client;
 import modelo.ClientNormal;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.Captor;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.HashMap;
@@ -62,24 +59,35 @@ class DaoClientsImplTest {
     void addClient() {
         //given
         Client cliente = new ClientNormal("name", "dni");
-        when(dataBase.loadClientes()).thenReturn(
-                new HashMap<>());
+        Client clienteAnterior = new ClientNormal("pepe", "123");
         Map<String, Client> map = new HashMap<>();
-        doAnswer(invocation -> {
-            map.putAll(invocation.getArgument(0));
-            return null;
-        }).when(dataBase).saveClientes(anyMap());
+        map.put("123",clienteAnterior);
+        when(dataBase.loadClientes()).thenReturn(
+                map);
+
+//        doAnswer(invocation -> {
+//            map.putAll(invocation.getArgument(0));
+//            return null;
+//        }).when(dataBase).saveClientes(anyMap());
 
         //when
         daoClients.addClient(cliente);
 
 
+        InOrder inOrder = inOrder(dataBase);
+
+
         //then
         assertAll(() -> assertThat(map).containsEntry("dni", cliente),
+                () -> assertThat(map).containsEntry("123", clienteAnterior),
                 () -> {
-                    verify(dataBase).saveClientes(captor.capture());
+                    inOrder.verify(dataBase).loadClientes();
+                    inOrder.verify(dataBase).saveClientes(captor.capture());
+
                     Map<String, Client> clientes = captor.getValue();
                     assertThat(clientes).containsEntry("dni", cliente);
+                    assertThat(clientes).containsEntry("123", clienteAnterior);
+
                 }
         );
 

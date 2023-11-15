@@ -7,6 +7,7 @@ import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import lombok.extern.log4j.Log4j2;
 import modelo.Client;
+import modelo.ClientNormal;
 import modelo.ClientWithDiscount;
 import modelo.Ingredient;
 import modelo.error.ErrorClientAccounts;
@@ -68,8 +69,9 @@ public class ServicesClientsImpl implements ServicesClients {
             } else {
                 daoClients.addClient(client);
             }
+
         } else {
-            daoClients.addClient(client);
+           daoClients.addClient(client);
         }
 
         return error;

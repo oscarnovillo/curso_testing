@@ -51,6 +51,7 @@ public class DataBase {
             return clientes;
         } catch (FileNotFoundException e) {
             log.error(e.getMessage(), e);
+
         }
         return null;
     }

@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23c3476e-416a-4131-8352-b32e2216fa1f" name="Changes" comment="bases de datos" />
+    <list default="true" id="23c3476e-416a-4131-8352-b32e2216fa1f" name="Changes" comment="bases de datos">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mercadona.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Mercadona.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/impl/DaoClientsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/impl/DaoClientsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/impl/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/impl/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servicios/impl/ServicesClientsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servicios/impl/ServicesClientsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/data/impl/DaoClientsImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/data/impl/DaoClientsImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/servicios/impl/ServicesClientsImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/servicios/impl/ServicesClientsImplTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,25 +64,25 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Oscar",
-    "last_opened_file_path": "C:/tools/proyectos/dam2_2324/PSP/javafx17_multipantalla",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Oscar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/tools/proyectos/dam1_21-22/ENTORNOS/Mercadona_DI&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\tools\proyectos\curso de git y pruebas\curso_testing\Mercadona_DI\src\main\java" />
@@ -81,34 +91,8 @@
       <recent name="data.bd" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServicesClientsImplTest">
-    <configuration name="DIJavafx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.main.DIJavafx" />
-      <module name="Mercadona" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gui.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Mercadona" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ui.Mercadona" />
-      <module name="Mercadona" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DaoClientsImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DaoClientsImplTest.addClient">
+    <configuration name="DaoClientsImplTest.addClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mercadona" />
       <extension name="coverage">
         <pattern>
@@ -118,7 +102,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="data.impl" />
       <option name="MAIN_CLASS_NAME" value="data.impl.DaoClientsImplTest" />
+      <option name="METHOD_NAME" value="addClient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicesClientsImplTest$AddClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mercadona" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="servicios.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="servicios.impl.ServicesClientsImplTest" />
+      <option name="MAIN_CLASS_NAME" value="servicios.impl.ServicesClientsImplTest$AddClient" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicesClientsImplTest$AddClient.addClientConDescuentoDemasiadoGrande" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mercadona" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="servicios.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="servicios.impl.ServicesClientsImplTest" />
+      <option name="MAIN_CLASS_NAME" value="servicios.impl.ServicesClientsImplTest$AddClient" />
+      <option name="METHOD_NAME" value="addClientConDescuentoDemasiadoGrande" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,7 +154,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServicesClientsImplTest.isClientWithDiscount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServicesClientsImplTest.addClientConDescuentoNegativo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Mercadona" />
       <extension name="coverage">
         <pattern>
@@ -148,19 +164,35 @@
       </extension>
       <option name="PACKAGE_NAME" value="servicios.impl" />
       <option name="MAIN_CLASS_NAME" value="servicios.impl.ServicesClientsImplTest" />
-      <option name="METHOD_NAME" value="isClientWithDiscount" />
+      <option name="METHOD_NAME" value="addClientConDescuentoNegativo" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TORNADOFX_RUNCONFIGURATION" run-type="App" live-views="false" live-stylesheets="false" dump-stylesheets="false">
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DaoClientsImplTest.addClient" />
+        <item itemvalue="JUnit.ServicesClientsImplTest$AddClient" />
+        <item itemvalue="JUnit.ServicesClientsImplTest$AddClient.addClientConDescuentoDemasiadoGrande" />
         <item itemvalue="JUnit.ServicesClientsImplTest" />
-        <item itemvalue="Application.Mercadona" />
-        <item itemvalue="JUnit.ServicesClientsImplTest.isClientWithDiscount" />
-        <item itemvalue="JUnit.DaoClientsImplTest" />
-        <item itemvalue="Application.DIJavafx" />
+        <item itemvalue="JUnit.ServicesClientsImplTest.addClientConDescuentoNegativo" />
       </list>
     </recent_temporary>
   </component>
@@ -175,6 +207,7 @@
       <workItem from="1698168026598" duration="4389000" />
       <workItem from="1699376007046" duration="8718000" />
       <workItem from="1699455731713" duration="8549000" />
+      <workItem from="1700060762995" duration="7685000" />
     </task>
     <task id="LOCAL-00001" summary="bases de datos">
       <option name="closed" value="true" />
@@ -220,5 +253,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bases de datos" />
     <option name="LAST_COMMIT_MESSAGE" value="bases de datos" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Mercadona_DI$ServicesClientsImplTest_addAllergen.ic" NAME="ServicesClientsImplTest.addAllergen Coverage Results" MODIFIED="1700061778764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>servicios.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Mercadona_DI$ServicesClientsImplTest_addClientDuplicado.ic" NAME="ServicesClientsImplTest.addClientDuplicado Coverage Results" MODIFIED="1700062018136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>servicios.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Mercadona_DI$ServicesClientsImplTest_AddClient.ic" NAME="ServicesClientsImplTest$AddClient Coverage Results" MODIFIED="1700063952518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>servicios.impl.*</FILTER>
+    </SUITE>
   </component>
 </project>
