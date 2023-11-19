@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pantallaListado" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.pantallas.listado.ListadoController">
+   <children>
+      <TableView fx:id="tablaNormal" layoutX="31.0" prefHeight="93.0" prefWidth="531.0">
+        <columns>
+          <TableColumn fx:id="colCol" prefWidth="75.0" text="coll" />
+          <TableColumn fx:id="colDes" prefWidth="75.0" text="des" />
+           <TableColumn fx:id="colNum" prefWidth="75.0" text="numero" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

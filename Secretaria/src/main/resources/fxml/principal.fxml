@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.pantallas.principal.PrincipalController">
+    <center>
+       <!-- aqui se meteran las pantallas que se van cargando -->
+    </center>
+    <top>
+        <MenuBar fx:id="menuPrincipal">
+            <menus>
+                <Menu fx:id="menuProfesores" mnemonicParsing="false" text="Profesores">
+                    <items>
+                        <MenuItem fx:id="menuAdd" mnemonicParsing="false" text="add" />
+                        <MenuItem fx:id="menuItemPantalla1" mnemonicParsing="false" onAction="#menuClick" text="Pantalla1" />
+                        <MenuItem fx:id="menuItemListado" mnemonicParsing="false" onAction="#menuClick" text="listado" />
+                        <MenuItem fx:id="menuItemPantallaNueva" mnemonicParsing="false"  onAction="#menuClick" text="pantallaNueva" />
+                        <MenuItem fx:id="menuItemLogout" mnemonicParsing="false" onAction="#menuClick" text="Logout" />
+                        <MenuItem fx:id="menuItemExit" mnemonicParsing="false"  text="Exit" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>
