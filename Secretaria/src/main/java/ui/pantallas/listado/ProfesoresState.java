@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class ListadoState {
+public class ProfesoresState {
 
     private final List<Profesor> profesores;
     private final String error;

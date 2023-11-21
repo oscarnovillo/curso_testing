@@ -7,10 +7,16 @@ module secretaria {
     requires lombok;
     requires org.apache.logging.log4j;
 
+    requires spring.jdbc;
+    requires spring.tx;
 
     requires jakarta.inject;
     requires jakarta.cdi;
     requires io.vavr;
+    requires java.sql;
+    requires com.zaxxer.hikari;
+
+
 
     exports ui.main to javafx.graphics;
     exports ui.pantallas.principal;
@@ -22,6 +28,7 @@ module secretaria {
     exports dao;
     exports domain.usecases;
     exports domain.modelo;
+    exports domain.errores;
 
     opens ui.pantallas.listado to javafx.fxml;
 

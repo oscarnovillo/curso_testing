@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="pantallaListado" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.pantallas.listado.ListadoController">
+<AnchorPane fx:id="pantallaProfesores" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.pantallas.listado.ProfesoresController">
    <children>
-      <TableView fx:id="tablaNormal" layoutX="31.0" prefHeight="93.0" prefWidth="531.0">
+      <TableView fx:id="tablaProfesores" layoutX="31.0" prefHeight="342.0" prefWidth="278.0">
         <columns>
-          <TableColumn fx:id="colCol" prefWidth="75.0" text="coll" />
-          <TableColumn fx:id="colDes" prefWidth="75.0" text="des" />
-           <TableColumn fx:id="colNum" prefWidth="75.0" text="numero" />
+          <TableColumn fx:id="colNombre" prefWidth="137.79999160766602" text="nombre" />
+          <TableColumn fx:id="colDni" prefWidth="140.6000213623047" text="dni" />
         </columns>
       </TableView>
+      <Button layoutX="542.0" layoutY="217.0" mnemonicParsing="false" text="añadir" onAction="#addProfesor"/>
+      <TextField fx:id="txtNombre" layoutX="542.0" layoutY="138.0" promptText="nombre" />
+      <TextField fx:id="txtDni" layoutX="543.0" layoutY="88.0" promptText="dni" />
    </children>
 </AnchorPane>

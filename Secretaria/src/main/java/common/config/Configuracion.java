@@ -14,7 +14,10 @@ import java.util.Properties;
 @Singleton
 public class Configuracion {
 
-    private String pathDatos;
+    private String ruta;
+    private String user;
+    private String password;
+    private String driver;
 
     public Configuracion() {
 
@@ -22,12 +25,16 @@ public class Configuracion {
             Properties p = new Properties();
             p.load(getClass().getClassLoader()
                     .getResourceAsStream(Constantes.PATH_TO_CONFIG_FILE));
-            this.pathDatos = p.getProperty("pathDatos");
+            this.ruta = p.getProperty("ruta");
+            this.user = p.getProperty("user");
+            this.password = p.getProperty("password");
+            this.driver = p.getProperty("driver");
 
         } catch (IOException e) {
            log.error(e.getMessage(),e);
         }
     }
+
 
 
 }

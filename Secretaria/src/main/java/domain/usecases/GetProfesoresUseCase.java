@@ -8,16 +8,18 @@ import jakarta.inject.Inject;
 
 import java.util.List;
 
-public class AddProfesorUseCase {
+public class GetProfesoresUseCase {
+
 
     private final ProfesorDao profesorDao;
 
     @Inject
-    public AddProfesorUseCase(ProfesorDao profesorDao) {
+    public GetProfesoresUseCase(ProfesorDao profesorDao) {
         this.profesorDao = profesorDao;
     }
 
-    public Either<ErrorApp,Boolean> addProfesor(Profesor profesor) {
-        return profesorDao.addProfesor(profesor);
+    public Either<ErrorApp, List<Profesor>> dameTodos() {
+        return profesorDao.dameTodos();
     }
+
 }
