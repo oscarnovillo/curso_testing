@@ -17,7 +17,8 @@ public class ProfesoresViewModel {
     private final GetProfesoresUseCase getProfesoresUseCase;
 
     @Inject
-    public ProfesoresViewModel(AddProfesorUseCase addProfesorUseCase, GetProfesoresUseCase getProfesoresUseCase) {
+    public ProfesoresViewModel(AddProfesorUseCase addProfesorUseCase,
+                               GetProfesoresUseCase getProfesoresUseCase) {
         this.addProfesorUseCase = addProfesorUseCase;
         this.getProfesoresUseCase = getProfesoresUseCase;
         _state = new SimpleObjectProperty<>(new ProfesoresState(null, null, false));
@@ -52,6 +53,7 @@ public class ProfesoresViewModel {
                     loadProfesores();
                 })
                 .peekLeft(errorApp -> {
+
                     _state.setValue(
                             new ProfesoresState(null, errorApp.getMensaje(), false)
                     );

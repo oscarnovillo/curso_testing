@@ -10,6 +10,7 @@ import org.springframework.dao.DuplicateKeyException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+
 import javax.sql.DataSource;
 import java.util.List;
 
@@ -20,7 +21,8 @@ public class ProfesorDao {
 
 
     @Inject
-    public ProfesorDao( DataSource dataSource) {
+    public ProfesorDao(
+            DataSource dataSource) {
         this.dataSource = dataSource;
 
     }

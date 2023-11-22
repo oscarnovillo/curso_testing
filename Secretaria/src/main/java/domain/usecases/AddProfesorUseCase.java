@@ -18,6 +18,7 @@ public class AddProfesorUseCase {
     }
 
     public Either<ErrorApp,Boolean> addProfesor(Profesor profesor) {
+
         return profesorDao.addProfesor(profesor);
     }
 }

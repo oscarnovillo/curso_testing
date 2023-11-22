@@ -12,4 +12,5 @@ public class Profesor {
 
     private String dni;
     private String nombre;
+
 }

@@ -3,7 +3,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="pantallaProfesores" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.pantallas.listado.ProfesoresController">
+<AnchorPane fx:id="pantallaProfesores" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.pantallas.listado.ProfesoresController">
    <children>
       <TableView fx:id="tablaProfesores" layoutX="31.0" prefHeight="342.0" prefWidth="278.0">
         <columns>

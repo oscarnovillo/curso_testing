@@ -13,6 +13,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.testcontainers.containers.MySQLContainer;
 import org.testcontainers.junit.jupiter.Container;
@@ -29,7 +30,7 @@ class ProfesorDaoTest {
 
 
     @Container
-    static MySQLContainer<?> mySQLContainer =  new MySQLContainer<>("mysql:8.0.35-debian")
+    static MySQLContainer<?> mySQLContainer =  new MySQLContainer<>("mysql:8.0-debian")
             .withInitScript("initScript.sql")
             .withDatabaseName("secretaria")
             .withUsername("root")
@@ -75,6 +76,7 @@ class ProfesorDaoTest {
 
         //then
         assertThat(profesores).hasSize(3);
+        assertThat(profesores.get(0).getDni()).isEqualTo(1);
 
     }
 
@@ -86,6 +88,7 @@ class ProfesorDaoTest {
         Either<ErrorApp, Boolean> respuesta = dao.addProfesor(profesor);
 
         assertThat(respuesta.get()).isTrue();
+
         Table tablaProfesores = new Table(mysql, "profesores");
 
         assertThat(tablaProfesores).row(0)

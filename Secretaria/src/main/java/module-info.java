@@ -30,9 +30,8 @@ module secretaria {
     exports domain.modelo;
     exports domain.errores;
 
+
     opens ui.pantallas.listado to javafx.fxml;
-
-
     opens domain.modelo to javafx.base;
 
     opens ui.pantallas.principal;
