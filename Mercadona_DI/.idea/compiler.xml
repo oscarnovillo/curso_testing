@@ -3,9 +3,22 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
+<<<<<<< HEAD
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Mercadona" target="11" />
     </bytecodeTargetLevel>
+=======
+      <profile name="Annotation profile for Mercadona" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar" />
+        </processorPath>
+        <module name="Mercadona" />
+      </profile>
+    </annotationProcessing>
+>>>>>>> origin/develop
   </component>
 </project>
